@@ -26,7 +26,7 @@ public class User {
     private String password;
 
     @Transient
-    transient private String confirmPassword; // трансиентная - никуда не пишется при сериализации объектов
+    private String confirmPassword; // трансиентная - никуда не пишется при сериализации объектов
 
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
